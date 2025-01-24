@@ -1,0 +1,156 @@
+*{
+	all: unset;
+}
+
+.clock {
+	background-color: rgba(35,35,35,0.5);
+	border-radius: 10px;
+	color: rgba(255,255,255,0.8);
+}
+
+.divider {
+	font-size : 65px;
+	padding-left: 8px;
+}
+
+.time {
+	margin-top: 10px;
+	font-size : 65px;
+	font-weight : bold;
+}
+
+.time_mer {
+	font-size : 40px;
+	font-weight : bold;
+}
+
+.time_day {
+	font-size : 30px;
+	font-weight : normal;
+}
+
+
+.volume_bar, scale trough {
+	all: unset;
+	background-color: black;
+	border-radius: 10px;
+	min-height: 10px;
+	min-width: 120px;
+}
+
+.volume_bar, scale trough highlight {
+	all: unset;
+	background-color: transparent;
+	border-radius: 12px;
+}
+
+.volume {
+	all: unset;
+	background-color: rgba(35,35,35,0.5);
+	border-radius: 10px;
+}
+
+.volume_bar scale trough highlight {
+	background-color: white;
+}
+
+.volbtn{
+	all: unset;
+	font-size: 20px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+.volume_bar{
+	all: unset;
+	margin-top: 56px;
+}
+
+
+
+
+
+
+
+
+
+
+/*.power-btn {
+	padding: 0.4em;
+	border-radius: 0.1em;
+	font-size: 1.5em;
+	padding-right: 14px;
+	margin-right: 2px;
+	border: 5px;
+	margin-bottom: -5px;
+	margin-bottom: -5px;
+	color: white;
+	opacity: 0.8;
+	&:hover {
+		transition: 200ms linear background-color, border-radius;
+		background-color: rgba(#686868, 0.6);
+	}
+}
+  
+.reboot-btn {
+	padding: 0.4em;
+	border-radius: 0.1em;
+	font-size: 1.5em;
+	padding-right: 10px;
+	padding-top: 9px;
+	margin-right: 2px;
+	border: 5px;
+	margin-bottom: -5px;
+	margin-bottom: -5px;
+	color: white;
+	opacity: 0.8;
+	&:hover {
+		transition: 200ms linear background-color, border-radius;
+		background-color: rgba(#686868, 0.6);
+	}
+} */
+
+.app-btn {
+	padding: 0.4em;
+	font-size: 1.5em;
+	border-radius: 0.1em;
+	padding-right: 12px;
+	margin-right: 2px;
+	border: 5px;
+	margin-bottom: -5px;
+	margin-bottom: -5px;
+	color: white;
+	opacity: 0.8;
+	&:hover {
+		text-shadow: 0 0 1px , 0 0 2px #fff, 0 0 3px rgb(220,220,220), 0 0 4px rgb(180,180,180), 0 0 5px rgb(140,140,140), 0 0 8px rgb(100,100,100);
+	}
+}
+
+.close-btn{
+	padding: 0.4em;
+	font-size: 1.5em;
+	border-radius: 0.1em;
+	padding-right: 16px;
+	padding-left: 0px;
+	margin-right: 2px;
+	border: 5px;
+	margin-bottom: -5px;
+	margin-bottom: -5px;
+	color: white;
+	opacity: 0.8;
+	&:hover {
+		color: red;
+		text-shadow: 0 0 1px , 0 0 2px #f00, 0 0 3px rgb(220,0,0), 0 0 4px rgb(180,0,0), 0 0 5px rgb(140,0,0), 0 0 8px rgb(100,0,0);
+    }
+}
+
+.layout-box {
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 70px;
+	font-size: 25px;
+	padding: 0em;
+	background-color: rgba(35,35,35,0.8);
+	border-radius: 10px;
+}
+/*---------------------- Random Music Widget :// ------------------- */

@@ -1,0 +1,9 @@
+;;;; IMPORTS
+(include "eww_variables.yuck")
+
+(defwidget clock []
+	(box :class "clock" :orientation "v" :spacing 0 :space-evenly false :vexpand "false" :hexpand "false"
+    	(box :orientation "h" :spacing 0 :space-evenly false :halign "center"
+        	(label :class "time" :halign "center" :wrap "true" :limit-width 25 :text "${HOUR}⏽${MIN}"))
+    	(box :orientation "h" :spacing 0
+        	(label :class "time_day" :valign "end" :halign "center" :wrap "true" :limit-width 25 :text DAY))))

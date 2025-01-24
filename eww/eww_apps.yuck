@@ -1,0 +1,10 @@
+(defwidget apps []
+  (box :class "layout-box" :space-evenly false :orientation "vertical"
+    (box :space-evenly true :hexpand true :vexpand true
+                (button :onclick "/home/ben/.config/scripts/wallpick.sh & eww close apps & eww close apps-closer" :class "app-btn" "󰸉")
+                (button :onclick "alacritty --command btop & eww close apps & eww close apps-closer" :class "app-btn" "")
+                (box (label :text "|"))
+                (button :onclick "poweroff" :class "app-btn" "")
+                (button :onclick "reboot" :class "app-btn" "")
+                (box (label :text "|"))
+                (button :onclick "eww close apps & eww close apps-closer" :class "close-btn" ""))))

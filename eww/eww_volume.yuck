@@ -1,0 +1,8 @@
+(defpoll VOLUME :interval "1s" "scripts/getvol.sh")
+
+(defwidget volume [] 
+	(box :class "clock" :vexpand "false" :hexpand "false" 
+		(box :orientation "v" :spacing 35 :halign "center" :valign "center" :space-evenly "false" :vexpand "false" :hexpand "false"     
+			(box :class "volume_bar" :orientation "h" :spacing 20 :space-evenly "false" :vexpand "false" :hexpand "false" 
+				(box :class "volbtn" (label :text "󰕾"))
+				(scale :flipped "false" :orientation "h" :min 0 :max 100 :value VOLUME :onchange "wpctl set-volume @DEFAULT_SINK@ {}%" )))))

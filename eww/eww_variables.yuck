@@ -1,0 +1,7 @@
+;;;; FETCH AND DATE
+
+;; Time vars
+(defpoll HOUR :interval "5s" `date +\"%I\"`)
+(defpoll MIN :interval "5s" `date +\"%M\"`)
+(defpoll MER :interval "5s" `date +\"%p\"`)
+(defpoll DAY :interval "5s" `date +\"%A\"`)

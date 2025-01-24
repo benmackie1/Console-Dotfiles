@@ -1,0 +1,20 @@
+;;;; IMPORTS
+(include "eww_clock.yuck")
+(include "eww_closers.yuck")
+(include "eww_apps.yuck")
+
+(defwindow clock :stacking "bg" :focusable "false" :monitor 0
+    	:geometry (geometry :x 0 :y 0 :width 270 :height 155 :anchor "center")
+                	(clock))
+
+(defwindow apps
+  :monitor 0
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore true
+           :geometry (geometry :x "86.8%"
+                               :y "-70px"
+                               :width "0px"
+                               :height "0px"
+                               :anchor "top center")
+  (apps))
