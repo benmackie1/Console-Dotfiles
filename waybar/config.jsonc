@@ -1,0 +1,219 @@
+//__________            /\            __      __               ___.                    _________                _____.__        
+//\______   \ ____   ___)/  ______   /  \    /  \_____  ___.__.\_ |__ _____ _______    \_   ___ \  ____   _____/ ____\__| ____  
+//|    |  _// __ \ /    \ /  ___/   \   \/\/   /\__  \<   |  | | __ \\__  \\_  __ \   /    \  \/ /  _ \ /    \   __\|  |/ ___\ 
+//|    |   \  ___/|   |  \\___ \     \        /  / __ \\___  | | \_\ \/ __ \|  | \/   \     \___(  <_> )   |  \  |  |  / /_/  >
+//|______  /\___  >___|  /____  >     \__/\  /  (____  / ____| |___  (____  /__|       \______  /\____/|___|  /__|  |__\___  / 
+//       \/     \/     \/     \/           \/        \/\/          \/     \/                  \/            \/        /_____/  
+
+{
+
+"layer": "top",
+"position": "top",
+"mod": "dock",
+"height": 30,
+"exclusive": true,
+"passthrough": false,
+"gtk-layer-shell": true,
+"reload_style_on_change": true,
+
+// --- General ---
+
+"tray": {
+    "icon-size": 18,
+    "rotate": 0,
+    "spacing": 15
+},
+
+    "modules-left": [],
+    "modules-center": ["custom/paddsmall", "group/applications"],
+    "modules-right": ["group/rightmodules"],
+    
+    
+// __  __  _____  ____  __  __  __    ____  ___ 
+//(  \/  )(  _  )(  _ \(  )(  )(  )  ( ___)/ __)
+//)     (  )(_)(  )(_) ))(__)(  )(__  )__) \__ \
+//(_/\/\_)(_____)(____/(______)(____)(____)(___/
+    
+// --- Left
+
+"custom/sidebar": {
+    "format": "",
+    "on-click": "eww open sidebar --toggle & eww open sidebar-closer --toggle",
+    "tooltip": false
+},
+
+"hyprland/workspaces": {
+    "format": " ",
+    "disable-scroll": true,
+    "rotate": 0,
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "persistent-workspaces": {
+        "*": 6
+    }
+},
+
+"hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+        "": "",
+        "firefox": "  󰈹  > Firefox",
+        "alacritty": "    > Kitty",
+        "spotify": "    > Spotify",
+        "discord": "    > Discord",
+        "org.kde.dolphin": "    > File Manager",
+        "foot": "    > File Manager",
+        "code-oss": "    > Code",
+        "rofi": "    > Rofi",
+        "thunderbird": "  󰇮  > Emails",
+        "steam": "    > Steam",
+        "xwaylandvideobridge": ""
+    }
+},
+
+// --- Center
+
+"custom/firefox": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false,
+    "tooltip-format": "Steam",
+    "on-click": "firefox"
+},
+
+"custom/spotify": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false,
+    "tooltip-format": "Steam",
+    "on-click": "spotify-launcher"
+},
+
+"custom/settings": {
+    "format": " 󰣇 ",
+    "interval": "once",
+    "tooltip": false,
+    "tooltip-format": "Settings",
+    "on-click": "eww open apps & eww open apps-closer"
+},
+
+"custom/steam": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false,
+    "tooltip-format": "Steam",
+    "on-click": "bash /home/ben/.config/rofi/GamesLauncher/scripts/rofi-wrapper.sh games"
+},
+
+"custom/apps": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false,
+    "tooltip-format": "Steam",
+    "on-click": "rofi -show drun -theme /home/ben/.config/rofi/appdrawer.rasi"
+},
+
+"group/applications":{
+    "orientation": "horizontal",
+    "modules":[
+        "custom/firefox",
+        "custom/spotify",
+        "custom/settings",
+        "custom/steam",
+        "custom/apps"
+    ]
+},
+// --- Right
+
+// - Div 1 (Music / CPU & Memory)
+
+"mpris": {
+	"format": "{player_icon} {title} ",
+	"format-paused": "{status_icon} {title} ",
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "▶"
+	},
+    "max-length": 25,
+    "tooltip": true,
+    "tooltip-format": "{dynamic}"
+},
+
+"custom/cava": {
+    "exec": "~/.config/scripts/waybarCava.sh",
+    "format": "{}",
+    "tooltip": false
+},
+
+"temperature": {
+	"thermal-zone": 2,
+	"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C "
+},
+
+"cpu": {
+    "interval": 10,
+    "format": "󰍛 {usage}%",
+    "rotate": 0,
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+},
+    
+"memory": {
+    "states": {
+        "c": 90, // critical
+        "h": 60, // high
+        "m": 30 // medium
+    },
+    "interval": 30,
+    "format": "󰾆 {used}GB",
+    "rotate": 0,
+    "format-m": "󰾅 {used}GB",
+    "format-h": "󰓅 {used}GB",
+    "format-c": " {used}GB",
+    "format-alt": "󰾆 {percentage}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+},
+    
+"group/rightmodules":{
+    "orientation": "horizontal",
+    "modules":[
+        "mpris", 
+        "custom/cava", 
+        "custom/divider", 
+        "temperature", 
+        "custom/divider" , 
+        "cpu", 
+        "custom/divider" , 
+        "memory"
+    ]
+},
+
+    // modules for style //
+
+"custom/divider": {
+    "format": "⏽",
+    "interval": "once",
+    "tooltip": false
+},
+
+"custom/paddsmall": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+},
+    
+"custom/padd": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+}
+}
