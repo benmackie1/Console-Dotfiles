@@ -1,0 +1,57 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    drun-display-format: "{}";
+    hover-select: true;
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
+}
+
+
+* {
+    background-color: rgba(27,27,27,0);
+    background-alt: #1A1B26E0;
+    foreground: #c0caf5;
+    selected: #7aa2f7;
+    active: #9ece6a;
+    urgent: #f7768e;
+}
+
+window {
+    y-offset: 20px;
+    enabled: true;
+    width: 100%;
+    height: 20%;
+    location: south;
+    anchor: south;
+}
+
+mainbox {
+    enabled: true;
+    children: [listview];
+    background-color: rgba(27,27,27,0.6);
+}
+
+listview {
+    enabled: true;
+    columns: 7;
+    spacing: 5px;
+    padding: 0px 317px 0px 283px;
+    reverse: false;
+    cursor: "default";
+}
+
+element {
+    spacing: 5px;
+    padding: 0px 0px 8px 17px;
+    cursor: false;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected {
+    border-color: rgba(200,200,200,0.8);
+    border: 0px 0px 8px 0px;
+    border-offset: 0px 0px 10px 0px;
+    border-radius: 20px;
+}

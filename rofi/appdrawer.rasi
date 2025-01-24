@@ -1,0 +1,129 @@
+// Config //
+configuration {
+    modi: "drun,filebrowser,window,run";
+    show-icons: true;
+    separator-style: "none";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono Nerd Font 10";
+    icon-theme: "arcticons-icon-theme";
+    hover-select: true;
+    click-to-exit: true;
+}
+
+// Main //
+window {
+    text-color: inherit;
+    height: 35em;
+    width: 56em;
+    padding: 0em;
+    background-color: #00000000;
+    border-color: #1d1d1d;
+}
+
+mainbox {
+    background-color: #1d1d1d;
+    text-color: inherit;
+    enabled: true;
+    children: [ "inputbar", "listbox" ];
+}
+
+// Inputs //
+inputbar {
+    background-color: #00000000;
+    text-color: inherit;
+    padding: 5em 5em 6em 5em;
+    children: [ "entry" ];
+    background-image: url("~/.local/share/wallcache/wallcacheblur/goku-dragon-ball-hd-wallpaper-uhdpaper.com-265@3@ablur.jpg", width);
+    border-color: #1d1d1d;
+    border: 1px;
+}
+
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    border-radius: 1em;
+    padding: 1em;
+    text-color: white;
+    background-color: #1d1d1d;
+    placeholder: "Search...";
+    border: 0px 0px 2px 0px;
+    border-color: #353535;    
+}
+
+
+// Lists //
+listbox {
+    background-color: inherit;
+    text-color: inherit;
+    orientation: horizontal;
+    children: [ listview ];
+    background-color: #1d1d1d;
+}
+listview {
+    background-color: inherit;
+    text-color: inherit;
+    border-color: black;
+    border: 0px solid;
+    scrollbar: true;
+    cycle: true;
+    dynamic: true; 
+    cursor: "default";
+    padding: 1.3em;
+    spacing: 0.5em;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    background-color: #1d1d1d;
+}
+
+#scrollbar {
+    width: 4px ;
+    border: 0;
+    handle-color: #757575;
+    background-color: #202020;
+    handle-width: 8px ;
+    padding: 0;
+}
+
+// Elements //
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+    background-color: #353535;
+    text-color: white;
+    spacing: 0em;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+    text-color: inherit;
+    background-color: #353535;
+    text-color:       white;
+    spacing: 0em;
+    padding: 0.5em;
+    border-radius: 3px; 
+}
+
+element selected.normal {
+    background-color: inherit;
+    text-color: inherit;
+    background-color: #757575;
+    text-color: white;
+    border-radius: 3px;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 3px;
+    size: 1em;
+}
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.01;
+}

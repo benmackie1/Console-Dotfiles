@@ -1,0 +1,116 @@
+configuration {
+    show-icons:                     true;
+    drun-display-format:            "{name}";
+    drun-match-fields:              "name";
+    font:                           "Fira Sans 10";
+}
+
+* {
+    background-color:               transparent;
+    background:                     transparent;
+    text-color:                     white;
+}
+
+window {
+    height:                         350;
+    width:                          100%;
+    location:                       south;
+    anchor:                         south;
+    transparency:                   "real";
+    background-color:               rgba(27,27,27,0.6);
+    border:                         5px 0px 0px 0px;
+    border-color:                   rgba(100,100,100,0);
+}
+
+mainbox {
+    children:                       [inputbar-box, listview];
+    padding:                        0px 0px 0px 0px;
+    margin: -20px 0px 0px 0px;
+}
+
+listview {
+    padding:                        12px;
+    dynamic:                        true;
+    columns:                        5;
+}
+
+inputbar-box {
+    padding: 10px 0px 0px 0px;
+    children:                       [inputbar-side, inputbar, dummy];
+    orientation:                    horizontal;
+    expand:                         false;
+}
+
+inputbar-side {
+    border:                         5px 0px 0px 0px;
+    border-color:                   transparent;
+    margin:                         16px -100% 0px 0px;
+}
+
+inputbar {
+    children:                       [textbox-prompt, entry];
+    margin:                         16px 0px 0px 0px;
+    border:                         5px;
+    border-color:                   rgba(100,100,100,0.8);
+    border-radius:                  8px;
+}
+
+entry {
+    expand:                         false;
+    padding:                        4px;
+    margin:                         -6px;
+    horizontal-align:               0.5;
+    width:                          300;
+    background-color:               rgba(27,27,27,0.6);
+    border:                         6px;
+    border-color:                   rgba(100,100,100,0.8);
+    border-radius:                  8px;
+}
+
+element {
+    children:                       [dummy, element-box, dummy];
+    padding:                        0px;
+    orientation:                    horizontal;
+    border:                         0;
+    border-color:                   transparent;
+}
+
+element-box {
+    children:                       [element-icon, element-text];
+    orientation:                    vertical;
+    expand:                         false;
+}
+
+element-icon {
+    padding:                        0px -40px;
+    horizontal-align:               0.5;
+    border:                         4px 4px solid 4px 4px;
+    border-color:                   transparent;
+    border-radius:                  16;
+    size:                           240;
+}
+
+element-text {
+    width:                          200px;
+    horizontal-align:               0.5;
+}
+
+element-icon selected {
+    border-color: rgba(200,200,200,0.8);
+    border: 0px 4px 0px 4px;
+    border-offset: 0px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+@media (min-width: 3440) {
+    listview {
+        columns:                    16;
+    }
+}
+
+
+@media (min-width: 2400) {
+    listview {
+        columns:                    12;
+    }
+}

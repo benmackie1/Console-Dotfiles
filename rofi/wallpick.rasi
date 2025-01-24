@@ -1,0 +1,96 @@
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    drun-display-format: "{}";
+    hover-select: true;
+	me-select-entry: "";
+	me-accept-entry: "MousePrimary";
+}
+
+
+* {
+    font: "JetBrainsMono NF Bold 9";
+    background: #1A1B26;
+    background-alt: #1A1B26E0;
+    foreground: #c0caf5;
+    selected: #7aa2f7;
+    active: #9ece6a;
+    urgent: #f7768e;
+}
+
+window {
+    enabled: true;
+    width: 78.6%;
+    height: 58%;
+}
+
+mainbox {
+    enabled: true;
+    children: [listview];
+    background-color: #151515;
+}
+
+listview {
+    enabled: true;
+    columns: 5;
+    lines: 2;
+    spacing: 5px;
+    padding: 20px 30px;
+    cycle: false;
+    dynamic: false;
+    scrollbar: true;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    cursor: "default";
+    background-color: transparent;
+    orientation: vertical;
+}
+
+element {
+    enabled: true;
+    orientation: vertical;
+    spacing: 5px;
+    padding: 4px;
+    border-radius: 10px;
+    cursor: false;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+#scrollbar {
+    width: 4px ;
+    border: 0;
+    handle-color: #757575;
+    background-color: #202020;
+    handle-width: 8px ;
+    padding: 0;
+}
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation: horizontal;
+    }
+}
+
+element selected {
+    border-color: #757575;
+    border: 6px;
+    border-radius: 5px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+element-icon {
+	border-radius: 0;
+    cursor: inherit;
+    background-color: transparent;
+    padding-right: 30;
+    border-left: 30;
+}
+
+element-text {
+    enabled: false;
+}
