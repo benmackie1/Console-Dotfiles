@@ -1,0 +1,52 @@
+configuration {
+    show-icons:                     true;
+    drun-display-format:            "{name}";
+    drun-match-fields:              "name";
+}
+
+@import "launcher"
+
+window {
+    height:                         360;
+}
+
+listview {
+    padding:                        12px;
+    dynamic:                        true;
+    columns:                        9;
+}
+
+@media (min-width: 3440) {
+    listview {
+        columns:                    16;
+    }
+}
+
+
+@media (min-width: 2400) {
+    listview {
+        columns:                    12;
+    }
+}
+
+element-icon {
+    padding:                        0px -40px;
+    horizontal-align:               0.5;
+    border:                         4px;
+    border-color:                   transparent;
+    border-radius:                  16;
+    size:                           240;
+}
+
+element-icon selected {
+    border-color: rgba(200,200,200,0.8);
+    border: 4px;
+    border-offset: 0px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+element-text {
+    horizontal-align:               0.5;
+    horizontal-align:               0.5;
+    width:                          160px;
+}
